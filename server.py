@@ -24,18 +24,31 @@ app.add_middleware(
 # Initialize Redis
 if os.getenv('REDIS_URL'):
     # Railway Redis URL format: redis://default:password@host:port
-    print(f"Connecting to Redis using URL (redacted password)")
-    redis_client = redis.from_url(os.getenv('REDIS_URL'))
+    redis_url = os.getenv('REDIS_URL')
+    print(f"Connecting to Redis using URL: {redis_url.split('@')[1]}")  # Only print host:port part
+    try:
+        redis_client = redis.from_url(redis_url, decode_responses=True)
+        print("Redis client initialized successfully")
+    except Exception as e:
+        print(f"Failed to initialize Redis client: {str(e)}")
+        raise e
 else:
     # Local development Redis
-    print(f"Connecting to Redis at {os.getenv('REDIS_HOST', 'localhost')}:{os.getenv('REDIS_PORT', 6379)}")
-    redis_client = redis.Redis(
-        host=os.getenv('REDIS_HOST', 'localhost'),
-        port=int(os.getenv('REDIS_PORT', 6379)),
-        password=os.getenv('REDIS_PASSWORD', None),
-        db=0,
-        decode_responses=True
-    )
+    host = os.getenv('REDIS_HOST', 'localhost')
+    port = int(os.getenv('REDIS_PORT', 6379))
+    print(f"Connecting to Redis at {host}:{port}")
+    try:
+        redis_client = redis.Redis(
+            host=host,
+            port=port,
+            password=os.getenv('REDIS_PASSWORD', None),
+            db=0,
+            decode_responses=True
+        )
+        print("Redis client initialized successfully")
+    except Exception as e:
+        print(f"Failed to initialize Redis client: {str(e)}")
+        raise e
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
