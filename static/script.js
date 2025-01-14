@@ -2,7 +2,7 @@
 let clickQueue = [];
 const BATCH_SIZE = 100;
 const BATCH_INTERVAL = 100; // ms
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://faithful-cat-production.up.railway.app';
 
 // Statistics elements
 const totalClicksElement = document.getElementById('totalClicks');

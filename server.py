@@ -24,9 +24,11 @@ app.add_middleware(
 # Initialize Redis
 if os.getenv('REDIS_URL'):
     # Railway Redis URL format: redis://default:password@host:port
+    print(f"Connecting to Redis using URL (redacted password)")
     redis_client = redis.from_url(os.getenv('REDIS_URL'))
 else:
     # Local development Redis
+    print(f"Connecting to Redis at {os.getenv('REDIS_HOST', 'localhost')}:{os.getenv('REDIS_PORT', 6379)}")
     redis_client = redis.Redis(
         host=os.getenv('REDIS_HOST', 'localhost'),
         port=int(os.getenv('REDIS_PORT', 6379)),
@@ -47,7 +49,7 @@ async def health_check():
     try:
         # Test Redis connection
         await redis_client.ping()
-        return JSONResponse({"status": "ok", "redis": "connected"})
+        return JSONResponse({"status": "healthy"})
     except Exception as e:
         return JSONResponse(
             {"status": "error", "message": str(e)},
@@ -82,4 +84,12 @@ async def get_stats():
 
 @app.on_event("startup")
 async def startup_event():
-    await redis_client.flushdb() 
+    try:
+        print("Testing Redis connection...")
+        await redis_client.ping()
+        print("Redis connection successful!")
+        await redis_client.flushdb()
+        print("Redis database flushed.")
+    except Exception as e:
+        print(f"Redis connection failed: {str(e)}")
+        raise e 
