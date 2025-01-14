@@ -1,0 +1,98 @@
+[
+  {
+    "timestamp": "2025-01-14T16:25:37.964776",
+    "clicks_per_second": 1,
+    "success_rate": 100.0,
+    "actual_duration": 0.008642196655273438,
+    "successful_clicks": 5,
+    "total_clicks": 5,
+    "server_stats": {
+      "total_clicks": 14049,
+      "clicks_per_second": 5
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:39.975297",
+    "clicks_per_second": 1,
+    "success_rate": 100.0,
+    "actual_duration": 0.007012128829956055,
+    "successful_clicks": 5,
+    "total_clicks": 5,
+    "server_stats": {
+      "total_clicks": 14054,
+      "clicks_per_second": 5
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:41.996731",
+    "clicks_per_second": 3,
+    "success_rate": 100.0,
+    "actual_duration": 0.01848292350769043,
+    "successful_clicks": 15,
+    "total_clicks": 15,
+    "server_stats": {
+      "total_clicks": 14069,
+      "clicks_per_second": 15
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:44.016104",
+    "clicks_per_second": 5,
+    "success_rate": 100.0,
+    "actual_duration": 0.01624298095703125,
+    "successful_clicks": 25,
+    "total_clicks": 25,
+    "server_stats": {
+      "total_clicks": 14094,
+      "clicks_per_second": 25
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:46.061149",
+    "clicks_per_second": 10,
+    "success_rate": 100.0,
+    "actual_duration": 0.04140329360961914,
+    "successful_clicks": 50,
+    "total_clicks": 50,
+    "server_stats": {
+      "total_clicks": 14144,
+      "clicks_per_second": 50
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:48.114141",
+    "clicks_per_second": 17,
+    "success_rate": 100.0,
+    "actual_duration": 0.04888510704040527,
+    "successful_clicks": 85,
+    "total_clicks": 85,
+    "server_stats": {
+      "total_clicks": 14229,
+      "clicks_per_second": 85
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:50.191539",
+    "clicks_per_second": 31,
+    "success_rate": 100.0,
+    "actual_duration": 0.07367801666259766,
+    "successful_clicks": 155,
+    "total_clicks": 155,
+    "server_stats": {
+      "total_clicks": 14384,
+      "clicks_per_second": 155
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:25:52.325024",
+    "clicks_per_second": 56,
+    "success_rate": 85.35714285714285,
+    "actual_duration": 0.12583589553833008,
+    "successful_clicks": 239,
+    "total_clicks": 280,
+    "server_stats": {
+      "total_clicks": 14623,
+      "clicks_per_second": 239
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2025-01-14T16:23:51.862824",
+    "clicks_per_second": 1,
+    "success_rate": 100.0,
+    "actual_duration": 0.010606050491333008,
+    "successful_clicks": 5,
+    "total_clicks": 5,
+    "server_stats": {
+      "total_clicks": 11689,
+      "clicks_per_second": 5
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:23:53.879569",
+    "clicks_per_second": 1,
+    "success_rate": 100.0,
+    "actual_duration": 0.013895988464355469,
+    "successful_clicks": 5,
+    "total_clicks": 5,
+    "server_stats": {
+      "total_clicks": 11694,
+      "clicks_per_second": 5
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:23:55.907237",
+    "clicks_per_second": 3,
+    "success_rate": 100.0,
+    "actual_duration": 0.024372100830078125,
+    "successful_clicks": 15,
+    "total_clicks": 15,
+    "server_stats": {
+      "total_clicks": 11709,
+      "clicks_per_second": 15
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:23:57.923385",
+    "clicks_per_second": 5,
+    "success_rate": 100.0,
+    "actual_duration": 0.013247966766357422,
+    "successful_clicks": 25,
+    "total_clicks": 25,
+    "server_stats": {
+      "total_clicks": 11734,
+      "clicks_per_second": 25
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:23:59.952248",
+    "clicks_per_second": 10,
+    "success_rate": 100.0,
+    "actual_duration": 0.025882959365844727,
+    "successful_clicks": 50,
+    "total_clicks": 50,
+    "server_stats": {
+      "total_clicks": 11784,
+      "clicks_per_second": 50
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:24:01.985402",
+    "clicks_per_second": 17,
+    "success_rate": 100.0,
+    "actual_duration": 0.030192136764526367,
+    "successful_clicks": 85,
+    "total_clicks": 85,
+    "server_stats": {
+      "total_clicks": 11869,
+      "clicks_per_second": 85
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:24:04.043756",
+    "clicks_per_second": 31,
+    "success_rate": 100.0,
+    "actual_duration": 0.05498695373535156,
+    "successful_clicks": 155,
+    "total_clicks": 155,
+    "server_stats": {
+      "total_clicks": 12024,
+      "clicks_per_second": 155
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:24:06.153542",
+    "clicks_per_second": 56,
+    "success_rate": 100.0,
+    "actual_duration": 0.10584712028503418,
+    "successful_clicks": 280,
+    "total_clicks": 280,
+    "server_stats": {
+      "total_clicks": 12304,
+      "clicks_per_second": 280
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:24:08.357787",
+    "clicks_per_second": 100,
+    "success_rate": 91.2,
+    "actual_duration": 0.1965348720550537,
+    "successful_clicks": 456,
+    "total_clicks": 500,
+    "server_stats": {
+      "total_clicks": 12760,
+      "clicks_per_second": 456
+    }
+  },
+  {
+    "timestamp": "2025-01-14T16:24:10.965695",
+    "clicks_per_second": 177,
+    "success_rate": 37.514124293785315,
+    "actual_duration": 0.579805850982666,
+    "successful_clicks": 332,
+    "total_clicks": 885,
+    "server_stats": {
+      "total_clicks": 13092,
+      "clicks_per_second": 332
+    }
+  }
+]
