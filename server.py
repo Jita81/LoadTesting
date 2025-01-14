@@ -22,13 +22,18 @@ app.add_middleware(
 )
 
 # Initialize Redis
-redis_client = redis.Redis(
-    host=os.getenv('REDIS_HOST', 'localhost'),
-    port=int(os.getenv('REDIS_PORT', 6379)),
-    password=os.getenv('REDIS_PASSWORD', None),
-    db=0,
-    decode_responses=True
-)
+if os.getenv('REDIS_URL'):
+    # Railway Redis URL format: redis://default:password@host:port
+    redis_client = redis.from_url(os.getenv('REDIS_URL'))
+else:
+    # Local development Redis
+    redis_client = redis.Redis(
+        host=os.getenv('REDIS_HOST', 'localhost'),
+        port=int(os.getenv('REDIS_PORT', 6379)),
+        password=os.getenv('REDIS_PASSWORD', None),
+        db=0,
+        decode_responses=True
+    )
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
